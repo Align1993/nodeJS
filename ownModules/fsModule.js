@@ -1,4 +1,5 @@
 let fs = require('fs');
+let path = require('path');
 // fs.readFile('/nodeTest/defineModules/myModule.js', function(err, data) {  // file read
 //     if(!err) {
 //         console.log(data.toString());
@@ -71,12 +72,13 @@ let fs = require('fs');
 
 // fs read directory information
 
-fs.stat('/nodeTest', function(err, data) {
+fs.stat('/nodeJS', function(err, data) {
     console.log(data)
 })
 
 // readdir
 
-fs.readdir('/nodeTest', function(err, data) {
-    console.log(data)
+fs.readdir( __dirname, function(err, data) {
+   // console.log( path.join(__dirname + '/urlModule.js'))
+   console.log(data);
 });
